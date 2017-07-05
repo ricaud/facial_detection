@@ -21,6 +21,8 @@ predictor = dlib.shape_predictor(args["shape_predictor"]) #loads the landmark de
 
 #define capture device (webcam 0)
 cap = cv2.VideoCapture(0)
+#cap.set(cv2.CAP_PROP_FRAME_WIDTH, 800)
+#cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 800)
 
 #load image, resize, convert to grayscale
 #image = cv2.imread(args["image"])
