@@ -15,13 +15,16 @@ args = vars(ap.parse_args())
 detector = dlib.get_frontal_face_detector() #just detects the face
 predictor = dlib.shape_predictor(args["shape_predictor"]) #loads the landmark detector
 
+
 ##
 #this is where we find just the face
 ##
 
+#####TODO thread the video stream for faster performance
+
 #define capture device (webcam 0)
 cap = cv2.VideoCapture(0)
-#cap.set(cv2.CAP_PROP_FRAME_WIDTH, 800)
+#cap.set(cv2.CAP_PROP_FRAME_WIDTH, 800) ---Use this line and the next line to define height and width of the video stream
 #cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 800)
 
 #load image, resize, convert to grayscale
